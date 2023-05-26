@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap المعدل.css">
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    transition: 1s;
+    cursor: pointer;
+    user-select: none;
+    box-sizing: border-box;
+    
+}
+
+.h1{
+color: aqua;
+  margin-left: 90px;
+  transition: 1s;
+  
+}
+.h1:hover{
+    scale: 1.1;
+    color: blueviolet;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100px;
+    box-shadow: 1px 1px 1px 1px rgb(255, 255, 255);
+}
+ul{
+margin-right: 90px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+li{
+    list-style: none;
+    margin-left:50px ;
+
+}
+.ul li  a{
+   text-decoration: none;
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  transition: 1s;
+
+}
+.ul li:hover{
+    scale: 1.1;
+
+}
+#container{
+    margin-top: 250px;
+    height: 150px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    
+}
+#container h2{
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+}
+#container span{
+    display: block;
+    color: rgb(8, 222, 218);
+    text-align: center;
+    padding: 40px;
+}
+#btn{
+ margin-left: 30%;
+ height: 30px;
+ padding: 20px;
+ line-height: 0;
+ border: 1px solid black;
+ outline: none;
+ background-color: aqua;
+ border-radius: 10px;
+transition: 1s;
+}
+#btn:hover{
+    color: aliceblue;
+    background-color: black;
+    cursor: pointer;
+    scale: 1.1;
+
+}
+    </style>
+</head>
+<body id="body">
+    <nav>
+        
+            <h1 class="h1">color-fillper</h1>
+                <ul class="ul">
+
+                      <li><a href="">follow</a></li>
+                      <li><a href="">like</a></li>
+                      <li><a href="">share</a></li>
+
+
+
+
+        
+    </nav>
+    <div class="container" id="container">
+        <h2>background color is: <br> <span id="color"> </span></h2>
+        
+    </div>
+<div class="container mt-1 mr-1">
+    <button id="btn" >click me to change bg</button>
+
+</div>
+
+<script>
+    var colors=["#F2DA00","magenta","blue"," #FF00FF","#7102A2"
+,"cyan","#FF339D ","#FF5733","#AA33FF","#AA33FF","red"]
+var color=document.getElementById("color")
+var btn=document.getElementById("btn")
+
+
+
+btn.addEventListener("click",function(){
+var randomumber=getnumber()
+document.body.style.backgroundColor=colors[randomumber]
+color.innerHTML=colors[randomumber]
+})
+
+function getnumber(){
+    return (Math.floor(Math.random()*colors.length))
+}
+
+</script></body>
+</html>
